@@ -1,0 +1,194 @@
+@charset 'UTF-8';
+
+/* --- ROOT --- */
+:root {
+  /* Layout */
+  --l_maxWidth: 1400px;
+
+  /* Fonts */
+  --f_fontSize: 16px;
+  --f_lineHeight: 1.5;
+  --f_fontWeight: 400;
+  --f_fontStyle: normal;
+
+  /* Colores */
+  --c_black: #000;
+  --c_white: #fff;
+  --c_red600: #f00;
+  --c_green600: #0f0;
+  --c_blue600: #00f;
+  --c_yellow600: #ff0;
+  --c_purple600: #f0f;
+  --c_brown600: #a52a2a;
+  --c_gray600: #808080;
+  --c_gray300: #ccc;
+
+}
+
+
+/* --- Selector Universal --- */
+* {
+  margin: 0;
+  padding: 0;
+
+  /* Debbuger */
+  border: 1px dotted red;
+}
+
+/* --- HTML & Tags --- */
+html {
+  max-width: var(--l_maxWidth);
+  margin: 0 auto;
+
+  font-size: var(--f_fontSize);
+  line-height: var(--f_lineHeight);
+  font-weight: var(--f_fontWeight);
+  font-style: var(--f_fontStyle);
+}
+
+img {
+  max-width: 100%;
+  max-inline-size: 100%;
+  block-size: auto;
+  height: auto;
+  object-fit: cover / contain;
+  object-position: 50% 50%;
+}
+
+p {
+  max-width: 42ch;
+}
+
+/* - Layout - */
+.layout__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* --- Body --- */
+.Body {
+
+  background: var(--c_gray300);
+}
+
+
+/* --- Header --- */
+.Header {
+
+  & .logo {
+
+    & .logo__img {}
+  }
+
+  & .menu {
+
+    list-style-type: none;
+
+    & .menu__item {
+
+      & .menu__item--link {
+        text-decoration: none var(--c_black);
+      }
+    }
+  }
+
+  & .Hero {}
+}
+
+
+/* --- Aside --- */
+.Aside {
+
+  & .section {
+
+    & .article {
+
+      & .menu {
+
+        list-style-type: none;
+
+        & .menu__item {
+
+          & .menu__item--link {
+            text-decoration: none var(--c_black);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* --- Main --- */
+.Main {
+
+  & .section {
+
+    & .article {
+
+
+      & .header {
+
+        text-align: center;
+
+        & .title {}
+
+        & .subtitle {}
+      }
+
+      & .main {
+
+        & .paragraph {}
+      }
+    }
+  }
+}
+
+
+/* --- Footer --- */
+.Footer {
+
+  & .section {
+
+    & .article {
+
+      & .logo {
+
+        & .logo__img {}
+      }
+
+      & .menu {
+
+        list-style-type: none;
+
+        & .menu__item {
+
+          & .menu__item--link {
+            text-decoration: none var(--c_black);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* --- Media Queries --- */
+/* -- XL -- */
+@media screen and (1400px <=width <=1200px) {}
+
+/* -- LG -- */
+@media screen and (1999px <=width <=1080px) {}
+
+/* -- MD -- */
+@media screen and (1079px <=width <=820px) {}
+
+/* -- SM -- */
+@media screen and (819px <=width <=640px) {}
+
+/* -- XS -- */
+@media screen and (639px <=width <=420px) {}
+
+
+@media screen and (max-width: 419px) {}
