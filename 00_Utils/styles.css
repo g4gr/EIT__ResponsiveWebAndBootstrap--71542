@@ -30,6 +30,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: content-box;
 
   /* Debbuger */
   border: 1px dotted red;
@@ -76,19 +77,21 @@ p {
 /* --- Header --- */
 .Header {
 
-  & .logo {
+  & .Navbar {
+    & .logo {
 
-    & .logo__img {}
-  }
+      & .logo__img {}
+    }
 
-  & .menu {
+    & .menu {
 
-    list-style-type: none;
+      list-style-type: none;
 
-    & .menu__item {
+      & .menu__item {
 
-      & .menu__item--link {
-        text-decoration: none var(--c_black);
+        & .menu__item--link {
+          text-decoration: none var(--c_black);
+        }
       }
     }
   }
