@@ -30,7 +30,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
 
   /* Debbuger */
   border: 1px dotted red;
@@ -38,7 +37,6 @@
 
 /* --- HTML & Tags --- */
 html {
-
   font-size: var(--f_fontSize);
   line-height: var(--f_lineHeight);
   font-weight: var(--f_fontWeight);
@@ -67,28 +65,23 @@ p {
 
 /* --- Body --- */
 .Body {
+
   max-width: var(--l_maxWidth);
   margin: 0 auto;
 
-  display: grid;
-  grid: 128px 10vh 75vh 15vh / repeat(12, 1fr);
-
-  background-color: var(--c_gray300);
-
+  background: var(--c_gray300);
 }
 
 
 /* --- Header --- */
 .Header {
-  grid-row: 1 / 2;
-  grid-column: 1 / 13;
-
 
   & .Navbar {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 0;
 
     & .logo {
 
@@ -96,13 +89,10 @@ p {
     }
 
     & .menu {
-      display: flex;
-      gap: 1rem;
 
       list-style-type: none;
 
       & .menu__item {
-
 
         & .menu__item--link {
           text-decoration: none var(--c_black);
@@ -117,20 +107,12 @@ p {
 
 /* --- Aside --- */
 .Aside {
-  grid-row: 2 / 3;
-  grid-column: 1 / 13;
-
-  background-color: var(--c_green600);
 
   & .section {
 
     & .article {
 
       & .menu {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
 
         list-style-type: none;
 
@@ -148,10 +130,6 @@ p {
 
 /* --- Main --- */
 .Main {
-  grid-row: 3 / 4;
-  grid-column: 2 / 12;
-
-  background-color: var(--c_yellow600);
 
   & .section {
 
@@ -178,10 +156,6 @@ p {
 
 /* --- Footer --- */
 .Footer {
-  grid-row: 4 / 5;
-  grid-column: 5 / 13;
-
-  background-color: var(--c_red600);
 
   & .section {
 
