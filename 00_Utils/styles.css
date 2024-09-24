@@ -118,7 +118,7 @@ p {
 /* --- Aside --- */
 .Aside {
   grid-row: 2 / 3;
-  grid-column: 1 / 13;
+  grid-column: 1 / 4;
 
   background-color: var(--c_green600);
 
@@ -148,8 +148,8 @@ p {
 
 /* --- Main --- */
 .Main {
-  grid-row: 3 / 4;
-  grid-column: 2 / 12;
+  grid-row: 2 / 3;
+  grid-column: 4 / 13;
 
   background-color: var(--c_yellow600);
 
@@ -179,7 +179,7 @@ p {
 /* --- Footer --- */
 .Footer {
   grid-row: 4 / 5;
-  grid-column: 5 / 13;
+  grid-column: 1 / 13;
 
   background-color: var(--c_red600);
 
@@ -210,19 +210,36 @@ p {
 
 /* --- Media Queries --- */
 /* -- XL -- */
-@media screen and (1400px <=width <=1200px) {}
+@media screen and (1200px <=width <=1400px) {
+}
 
 /* -- LG -- */
-@media screen and (1999px <=width <=1080px) {}
+@media screen and (1080px <=width <=1999px) {}
 
 /* -- MD -- */
-@media screen and (1079px <=width <=820px) {}
+@media screen and (820px <=width <=1079px) {
+  .Body {
+    grid : 128px 10vh 75vh 15vh / repeat(8, 1fr);
+
+    background-color: #0f0;
+  }
+}
 
 /* -- SM -- */
-@media screen and (819px <=width <=640px) {}
+@media screen and (640px <=width <=819px) {
+  .Body {
+    grid : 128px 10vh 75vh 15vh / repeat(6, 1fr);
+
+    background-color: #00f;
+  }
+}
 
 /* -- XS -- */
-@media screen and (639px <=width <=420px) {}
+@media screen and (639px <=width <=420px) {
+  .Body {
+    grid : 128px 10vh 75vh 15vh / repeat(4, 1fr);
+  }
+}
 
 
 @media screen and (max-width: 419px) {}
