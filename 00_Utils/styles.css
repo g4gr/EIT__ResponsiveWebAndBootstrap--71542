@@ -83,37 +83,8 @@ p {
   grid-row: 1 / 2;
   grid-column: 1 / 13;
 
-
-  & .Navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    & .logo {
-
-      & .logo__img {}
-    }
-
-    & .menu {
-      display: flex;
-      gap: 1rem;
-
-      list-style-type: none;
-
-      & .menu__item {
-
-
-        & .menu__item--link {
-          text-decoration: none var(--c_black);
-        }
-      }
-    }
-  }
-
   & .Hero {}
 }
-
 
 /* --- Aside --- */
 .Aside {
