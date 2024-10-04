@@ -20,6 +20,15 @@ li > a {
     color: white;
 }
 
+p {
+    max-width: 52ch;
+}
+
+.Main section article {
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+}
+
 /* --- Footer --- */
 .Footer {
     background-color: hsl(192, 100%, 9%);
