@@ -3,3 +3,24 @@
 * {
     border : 1px dashed red ;
 }
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border-radius: 2rem;
+}
+
+ul {
+    background-color: transparent !important;
+}
+
+li > a {
+    color: white;
+}
+
+/* --- Footer --- */
+.Footer {
+    background-color: hsl(192, 100%, 9%);
+}
