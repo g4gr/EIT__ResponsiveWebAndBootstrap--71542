@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
-* {
-    border : 1px dashed red ;
+:root {
+    --c_magenta500: #FE52C0;
+    --c_cyan200: #edfbfe;
 }
 
 a {
@@ -12,11 +13,16 @@ button {
     border-radius: 2rem;
 }
 
+.btn-magenta {
+    background-color: var(--c_magenta500) !important;
+    color: white !important;
+}
+
 ul {
     background-color: transparent !important;
 }
 
-li > a {
+li>a {
     color: white;
 }
 
@@ -24,12 +30,90 @@ p {
     max-width: 52ch;
 }
 
-.Main section article {
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
-    border-radius: 1rem;
+.Header {
+    background-color: var(--c_cyan200);
+
+    background-image: url('./assets/bg-hero-desktop.svg');
+    background-position: center;
+
+    & .navbar {
+        height: 128px;
+
+        & button {
+            padding: .5rem 5rem;
+        }
+    }
+}
+
+.Main {
+    margin: 10rem 0;
+
+    & section {
+
+        & article {
+            box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+            border-radius: 1rem;
+
+            & div {
+                display : grid ;
+                place-content: center;
+            }
+        }
+    }
 }
 
 /* --- Footer --- */
 .Footer {
+    height: 60vh;
+
     background-color: hsl(192, 100%, 9%);
+
+    & section {
+
+        & article {
+
+            & div {
+                box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+                border-radius: 1rem;
+            }
+        }
+    }
+
+    & section:nth-child(2) {
+        margin-top: 10rem;
+
+        & article {
+
+            ul {
+                background-color: hsl(192, 100%, 9%) !important;
+
+                li {
+                    line-height: 1.5;
+
+                    background-color: transparent !important;
+                    border: none ;
+                }
+
+                li a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    & section{
+
+        & article:last-child {
+            
+            & ul {
+
+                a {
+                    padding: .5rem ;
+                    border : 1px solid white ;
+                    border-radius : 50% ;
+                }
+            }
+        }
+
+    }
 }
