@@ -25,24 +25,85 @@
                         <img src="./assets/logo.svg" alt="logo">
                     </figure>
                 </a>
-                <button class="btn btn-lg text-bg-light rounded-pill">
+                <button class="btn btn-lg text-bg-light rounded-pill" data-bs-toggle="modal" data-bs-target="#Modal">
                     Try It Free
                 </button>
+                <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="ModalLabel">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="InputEmail1" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="InputEmail1"
+                                            aria-describedby="emailHelp">
+                                        <div id="emailHelp" class="form-text">We'll never share your email with anyone
+                                            else.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="InputPassword1" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="InputPassword1">
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="Check1">
+                                        <label class="form-check-label" for="Check1">Check me out</label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-magenta">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
         <div class="container-fluid my-5 px-5">
             <div class="row py-5">
-                <div class="col col-lg-6 col-sm-12 align-self-center">
+                <div class="col col-md-6 col-sm-12 align-self-center">
                     <h1 class="fw-bolder">Build The Community Your Fans Will Love</h1>
                     <p class="">Huddle re-imagines the way we build communities. You have a voice, but so does your
                         audience. Create connections with your users as you engage in genuine discussion.</p>
                     <div class="row">
-                        <button class="btn btn-lg btn-magenta rounded-pill col-8">Get Started For Free</button>
+                        <button class="btn btn-lg btn-magenta rounded-pill col-8" data-bs-toggle="modal"
+                            data-bs-target="#modal">Get Started For Free</button>
                     </div>
                 </div>
                 <picture class="col col-lg-6 col-sm-12">
                     <img class="img-fluid" src="./assets/illustration-mockups.svg" alt="illustration-mockups">
                 </picture>
+            </div>
+            <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLabel">Join Huddle Community</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Welcome to Huddle! We're excited to have you join our community. Here's what you can
+                                expect:</p>
+                            <ul>
+                                <li>Connect with like-minded individuals</li>
+                                <li>Engage in meaningful discussions</li>
+                                <li>Build a loyal fan base</li>
+                                <li>Access powerful community-building tools</li>
+                            </ul>
+                            <p>Ready to get started? Fill out the form below to create your account!</p>
+                            <!-- You can add a form here for user registration -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-magenta">Create Account</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -97,38 +158,59 @@
             <article class="col col-lg-6 col-sm-12 offset-md-3">
                 <div class="row bg-light py-5 position-absolute top-10 start-50 translate-middle">
                     <h2 class="text-center">Ready To Build Your Community?</h2>
-                    <button class="btn btn-lg btn-magenta col-6 offset-3 rounded-pill">Get Started For Free</button>
+                    <button class="btn btn-lg btn-magenta col-6 offset-3 rounded-pill" data-bs-toggle="modal"
+                        data-bs-target="#modal">Get Started For Free</button>
                 </div>
             </article>
         </section>
         <section class="row section px-5">
-            <figure class="col col-lg-12">
+            <figure class="col col-lg-12 col-md-12 col-sm-12">
                 <img src="./assets/logo.svg" alt="logo">
             </figure>
-            <article class="col-3 article">
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <a href="#" target="_blank" rel="noopener noreferrer">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro aperiam minus nemo debitis,
-                            quae neque eaque tempore quisquam. Laboriosam, quidem.
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#" target="_blank" rel="noopener noreferrer">
+            <article class="col-3 col-lg-3 col-md-12 col-sm-12">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              <i class="bi bi-geo-alt-fill pl-2"></i>
+                              Ubication
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quisquam.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                             <i class="bi bi-telephone-outbound-fill"></i>
                             +1-543-123-4567
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quisquam.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                             <i class="bi bi-envelope-paper-fill"></i>
-                            example@huddle.com
-                        </a>
-                    </li>
-                </ul>
+                            @huddle.com
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quisquam.
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </article>
-            <article class="col-3">
+            <article class="col-3 col-lg-3 col-md-12 col-sm-12 py-md-3 ">
                 <ul class="list-group">
                     <li class="list-group-item">
                         <a href="#" target="_blank" rel="noopener noreferrer">
@@ -147,7 +229,7 @@
                     </li>
                 </ul>
             </article>
-            <article class="col-3">
+            <article class="col-3 col-lg-3 col-md-12 col-sm-12py-md-3">
                 <ul class="list-group">
                     <li class="list-group-item">
                         <a href="#" target="_blank" rel="noopener noreferrer">
@@ -166,7 +248,7 @@
                     </li>
                 </ul>
             </article>
-            <article class="col-3">
+            <article class="col-3 col-lg-3 col-md-12 col-sm-12 pb-md-5">
                 <ul class="list-group flex-row justify-content-center">
                     <li class="list-group-item">
                         <a href="#" target="_blank" rel="noopener noreferrer">

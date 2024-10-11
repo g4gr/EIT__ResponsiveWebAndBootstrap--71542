@@ -64,7 +64,7 @@ p {
 
 /* --- Footer --- */
 .Footer {
-    height: 60vh;
+    height: auto;
 
     background-color: hsl(192, 100%, 9%);
 
@@ -96,6 +96,21 @@ p {
 
                 li a:hover {
                     text-decoration: underline;
+                }
+            }
+            & .accordion {
+                background-color: hsl(192, 100%, 9%) !important;
+
+                & .accordion-item {
+                    border : none ;
+                    background-color: transparent !important;
+                    color : white ;
+
+                    & .accordion-button {
+                        background-color: transparent !important ;
+                        color : white ;
+                        border : none ;
+                    }
                 }
             }
         }
